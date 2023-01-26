@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+###>This script uses a while loop to iterate from 1 to 20. Within the loop, it uses a case statement to check the current value of the counter variable. If the counter variable is equal to 4, 9, or 17, the script will display a message "4","9","17" respectively along with a message "bad luck from China","bad luck from Japan","bad luck from Italy" respectively. Otherwise, it will just display the current value of the counter variable.###<
+
+
+
+count=1
+
+while [ $count -le 20 ]
+do
+  case $count in
+    4) echo "4 bad luck from China";;
+    9) echo "9 bad luck from Japan";;
+    17) echo "17 bad luck from Italy";;
+    *) echo $count;;
+  esac
+  count=$((count + 1))
+done
